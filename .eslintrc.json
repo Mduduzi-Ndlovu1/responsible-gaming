@@ -1,0 +1,29 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
+  "rules": {
+    "prefer-const": "error",
+    "@typescript-eslint/no-explicit-any": "error",
+    "no-magic-numbers": ["warn", { "ignore": [-1, 0, 1] }],
+    "max-lines-per-function": ["error", { "max": 50 }]
+  },
+  "ignorePatterns": ["*.html"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }]
+      }
+    }
+  ]
+}
