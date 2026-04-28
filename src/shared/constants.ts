@@ -26,6 +26,7 @@ export const PRESET_RESOURCES = [
   { name: 'BeGambleAware', url: 'https://www.begambleaware.org', region: 'UK' }
 ]
 
+export const MAX_SESSION_GAP_MS = 30 * 60 * 1000
 export const REMOVE_MESSAGE_DELAY_MS = 3000
 export const CURRENCY_DEFAULT = 'USD';
 export const SESSION_LATE_NIGHT_START_HOUR = 22;

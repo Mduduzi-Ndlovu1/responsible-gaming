@@ -62,6 +62,14 @@ export async function saveSettings(settings: UserSettings): Promise<void> {
 }
 
 /**
+ * Get spending records from storage
+ */
+export async function getSpendingRecords(): Promise<SpendingRecord[]> {
+  const records = await get<SpendingRecord[]>(STORAGE_KEYS.spending)
+  return records ?? []
+}
+
+/**
  * Append a spending record to the existing records array (immutable)
  */
 export async function appendSpending(record: SpendingRecord): Promise<void> {
