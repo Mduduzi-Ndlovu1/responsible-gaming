@@ -5,6 +5,7 @@
 import { getSettings } from '@shared/storage'
 import { isGamblingSite } from '@shared/gambling-sites'
 import { evaluateAndNotify } from '@modules/alerts'
+import { isSelfExcluded } from '@modules/support'
 
 interface ActiveSession {
   tabId: number
@@ -39,6 +40,12 @@ async function handleTabUpdate(tabId: number, url: string): Promise<void> {
     const isGambling = isGamblingSite(url)
     if (!isGambling) {
       activeSessions.delete(tabId)
+      return
+    }
+
+    const selfExcluded = await isSelfExcluded()
+    if (selfExcluded) {
+      void chrome.tabs.remove(tabId)
       return
     }
 
