@@ -4,6 +4,7 @@
 
 import { getSettings } from '@shared/storage'
 import { isGamblingSite } from '@shared/gambling-sites'
+import { evaluateAndNotify } from '@modules/alerts'
 
 interface ActiveSession {
   tabId: number
@@ -84,7 +85,7 @@ async function checkAlerts(): Promise<void> {
     if (!settings) return
 
     // Alert logic will be implemented in RG-008
-    console.log('Checking alerts...')
+    void evaluateAndNotify()
   } catch (error) {
     console.error('Alert check failed:', error)
   }
