@@ -19,6 +19,13 @@ export const STORAGE_KEYS = {
   resources: 'resources',
 } as const;
 
+export const PRESET_RESOURCES = [
+  { name: 'GamCare (UK)', url: 'https://www.gamcare.org.uk', region: 'UK' },
+  { name: 'NCPG (US)', url: 'https://www.ncpgambling.org', region: 'US' },
+  { name: 'Gambling Therapy', url: 'https://www.gamblingtherapy.org', region: 'Global' },
+  { name: 'BeGambleAware', url: 'https://www.begambleaware.org', region: 'UK' }
+]
+
 export const REMOVE_MESSAGE_DELAY_MS = 3000
 export const CURRENCY_DEFAULT = 'USD';
 export const SESSION_LATE_NIGHT_START_HOUR = 22;

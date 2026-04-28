@@ -2,6 +2,13 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 
 export default defineConfig({
+  resolve: {
+    alias: {
+      '@shared': resolve(__dirname, 'src/shared'),
+      '@modules': resolve(__dirname, 'src/modules'),
+      '@utils': resolve(__dirname, 'src/utils')
+    }
+  },
   build: {
     outDir: 'dist',
     emptyOutDir: true,

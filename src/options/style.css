@@ -10,6 +10,109 @@ h1 {
   margin-bottom: 24px;
 }
 
-section {
-  margin-bottom: 32px;
+h2 {
+  font-size: 18px;
+  margin: 20px 0 12px;
+}
+
+h3 {
+  font-size: 16px;
+  margin: 16px 0 8px;
+}
+
+.setting-item {
+  margin-bottom: 12px;
+}
+
+.setting-item label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.setting-item input[type="number"] {
+  width: 100px;
+  padding: 4px;
+}
+
+.setting-item select {
+  padding: 4px;
+  min-width: 200px;
+}
+
+.resource-item {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.resource-item a {
+  color: #1a73e8;
+  text-decoration: none;
+  margin-right: 8px;
+}
+
+.resource-item a:hover {
+  text-decoration: underline;
+}
+
+.region-tag {
+  font-size: 12px;
+  color: #666;
+  background: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.remove-resource {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.add-resource {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.add-resource input {
+  padding: 4px;
+  flex: 1;
+}
+
+#save-settings {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 24px;
+  width: 100%;
+}
+
+#save-settings:hover {
+  background: #45a049;
+}
+
+#options-message {
+  padding: 8px 12px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+#options-message.error {
+  background: #ffebee;
+  color: #c62828;
+}
+
+#options-message.success {
+  background: #e8f5e9;
+  color: #2e7d32;
 }
