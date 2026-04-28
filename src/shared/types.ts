@@ -44,9 +44,8 @@ export interface SupportResource {
  * Gambling site domain and detection keywords
  */
 export interface GamblingSite {
-  domain: string
-  keywords: string[]
-  name: string
+  domain: string;
+  keywords: string[];
 }
 
 /**
